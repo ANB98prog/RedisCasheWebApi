@@ -1,0 +1,15 @@
+﻿version: "3.9"
+   
+services:
+  redis:
+    image: "redis"
+    ports:
+        - "6379:6379"
+
+  mssql:
+    image: "mcr.microsoft.com/mssql/server"
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=y
+      - SA_PASSWORD=A!VeryComplex123Password
